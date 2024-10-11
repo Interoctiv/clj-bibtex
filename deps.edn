@@ -1,31 +1,31 @@
 {:paths ["resources" "src"]
  :deps {org.clojure/clojure {:mvn/version "RELEASE"}
-        org.jbibtex/jbibtex {:mvn/version "1.0.17"}
-        datascript/datascript {:mvn/version "0.18.7"}
-        net.cgrand/xforms {:mvn/version "0.19.2"}}
+        org.jbibtex/jbibtex {:mvn/version "1.0.20"}
+        datascript/datascript {:mvn/version "1.7.3"}
+        net.cgrand/xforms {:mvn/version "0.19.6"}}
  :aliases
  {:test {:extra-paths ["test"]
          :extra-deps {juxt/iota {:mvn/version "0.2.3"}
-                      lambdaisland/kaocha {:mvn/version "0.0-554"}
-                      lambdaisland/kaocha-cloverage {:mvn/version "0.0-41"}
+                      lambdaisland/kaocha {:mvn/version "1.91.1392"}
+                      lambdaisland/kaocha-cloverage {:mvn/version "1.1.89"}
                       org.clojure/test.check {:mvn/version "RELEASE"}}}
   :cambada
   {:extra-deps
    {luchiniatwork/cambada
-    {:mvn/version "1.0.2"}}}
+    {:mvn/version "1.0.5"}}}
   :uberjar {:extra-deps
-            {luchiniatwork/cambada {:mvn/version "1.0.2"}}
+            {luchiniatwork/cambada {:mvn/version "1.0.5"}}
             :main-opts ["-m" "cambada.uberjar"
-                        "--app-version" "0.1.1"
+                        "--app-version" "0.1.2"
                         "--app-group-id" "fi.varela"
                         "--app-artifact-id" "clj-bibtex"]}
   :jar {:extra-deps
-        {luchiniatwork/cambada {:mvn/version "1.0.2"}}
+        {luchiniatwork/cambada {:mvn/version "1.0.5"}}
         :main-opts ["-m" "cambada.jar"
-                    "--app-version" "0.1.1"
+                    "--app-version" "0.1.2"
                     "--app-group-id" "fi.varela"
                     "--app-artifact-id" "clj-bibtex"]}
   :deploy {:extra-deps {deps-deploy {:mvn/version "RELEASE"}}
            :main-opts ["-m" "deps-deploy.deps-deploy" "deploy"
-		                   "target/clj-bibtex-0.1.1.jar"]}}}
+		                   "target/clj-bibtex-0.1.2.jar"]}}}
 
